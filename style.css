@@ -24,7 +24,7 @@ body {
 
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav {
-    gap: 12px;
+    gap: 18px;
   }
 
   .navbar-expand-lg .navbar-nav li a:hover {
@@ -36,4 +36,41 @@ body {
   .navbar-collapse {
     text-align: center;
   }
+}
+
+/* Shop Page */
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.products li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  font-size: medium;
+}
+
+.products a {
+  color: black;
+  text-decoration: none;
+}
+
+.add_to_cart_button {
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.add_to_cart_button:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+
+footer a {
+  color: black;
 }
