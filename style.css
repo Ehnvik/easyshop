@@ -1,0 +1,13 @@
+/* 
+Theme Name: EasyShop Theme
+Text Domain: Gustav Ehnvik
+Version: 1.0
+Description: Fancy webshop for clothes sales
+Tags: ecommerce, responsive, fancy
+Author: Gustav Ehnvik
+Author URI: localhost
+*/
+
+body {
+  background-color: lightcyan;
+}
