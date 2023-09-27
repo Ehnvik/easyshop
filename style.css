@@ -9,5 +9,31 @@ Author URI: localhost
 */
 
 body {
-  background-color: lightcyan;
+  background-color: white;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+
+.menu-item a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav {
+    gap: 12px;
+  }
+
+  .navbar-expand-lg .navbar-nav li a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    text-align: center;
+  }
 }
