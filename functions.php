@@ -11,3 +11,11 @@ function mytheme_add_woocommerce_support()
     add_theme_support('woocommerce');
 }
 add_action('after_setup_theme', 'mytheme_add_woocommerce_support');
+?>
+
+<?php function my_excerpt_length($length)
+{
+    return  8;
+}
+add_filter('excerpt_length', 'my_excerpt_length');
+?>
