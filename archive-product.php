@@ -35,7 +35,24 @@ do_action('woocommerce_before_main_content');
         <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
     <?php endif; ?>
 
+    <?php if (have_rows('image_slider')) : ?>
+        <div class="slider">
+            <?php while (have_rows('image_slide')) : the_row();
+                $image = get_sub_field('image');
+            ?>
+                <div>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                </div>
+            <?php endwhile; ?>
+        </div>
+    <?php endif; ?>
+
+
+
+
+
     <?php
+
     /**
      * Hook: woocommerce_archive_description.
      *
