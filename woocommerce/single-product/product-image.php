@@ -37,10 +37,10 @@ $wrapper_classes   = apply_filters(
 	)
 );
 ?>
-<div class="<?php echo esc_attr(implode(' ', array_map('sanitize_html_class', $wrapper_classes))); ?>" data-columns="<?php echo esc_attr($columns); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
-	<?php // Lägg till en öppnande div före produktgalleriet
+<div class="product-images-wrapper <?php echo esc_attr(implode(' ', array_map('sanitize_html_class', $wrapper_classes))); ?>" data-columns="<?php echo esc_attr($columns); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
+	<?php
 	add_action('woocommerce_before_single_product_summary', function () {
-		echo '<div class="din-nya-klass">';
+		echo '<div class="awesome-class">';
 	}, 5); ?>
 	<div class="woocommerce-product-gallery__wrapper">
 		<?php
@@ -56,7 +56,7 @@ $wrapper_classes   = apply_filters(
 
 		?>
 
-		<div>
+		<div class="extra-img-container">
 			<?php do_action('woocommerce_product_thumbnails'); ?>
 		</div>
 	</div>

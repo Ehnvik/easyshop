@@ -69,7 +69,115 @@ body {
   text-decoration: underline;
 }
 
-/* Header */
+/* Single Product */
+
+.main-single-product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.single-product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.woocommerce-product-gallery--with-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.wp-post-image {
+  max-width: 80%;
+  height: auto;
+}
+
+.extra-img-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.single-product-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.single-product-cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.description-rating-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.quantity-selector {
+  margin-right: 10px;
+  border: solid black 1px;
+  padding: 5px;
+}
+
+.quantity-selector button {
+  background-color: white;
+  font-size: larger;
+}
+
+.minus-button {
+  margin-right: 15px;
+  border: 0;
+}
+
+.plus-button {
+  border: 0;
+}
+
+.minus-button,
+.plus-button {
+  transition: all 0.25s ease-in-out;
+  font-weight: 300;
+}
+
+.minus-button:hover,
+.plus-button:hover {
+  background-color: lightgray;
+}
+
+.quantity-number-input {
+  text-align: center;
+  width: 35px;
+  padding: 0px;
+  margin: 0;
+  border: 0;
+}
+
+.single_add_to_cart_button {
+  border: 0;
+  background-color: black;
+  color: white;
+  padding: 0px 15px;
+  transition: all 0.25s ease-in-out;
+}
+
+.single_add_to_cart_button:hover {
+  opacity: 0.8;
+}
+
+/* Footer */
 
 footer a {
   color: black;

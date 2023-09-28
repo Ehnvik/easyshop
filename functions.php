@@ -17,6 +17,7 @@ function easyshop_register_scripts()
     wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', array(), null, true);
     wp_enqueue_script('slick-js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), null, true);
     wp_enqueue_script('easyshop-jquery', get_template_directory_uri() . "/assets/js/jquery.js", array('jquery', 'slick-js'), $version, true);
+    wp_enqueue_script('easyshop-javascript', get_template_directory_uri() . "/assets/js/script.js", array(), $version, true);
 }
 
 add_action('wp_enqueue_scripts', 'easyshop_register_scripts');
