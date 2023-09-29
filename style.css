@@ -226,29 +226,49 @@ body {
   margin: 10px 0px;
 }
 
+@font-face {
+  font-family: "star";
+  src: url("../fonts/stars.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 .star-rating {
-  unicode-bidi: bidi-override;
-  direction: rtl;
+  overflow: hidden;
+  position: relative;
+  width: 7em;
+  height: 1em;
+  font-family: "star";
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1em;
+  letter-spacing: 0.4em;
+  color: var(--star-rating-inactive-color, #f9dfcc);
+  margin: 10px 0px;
 }
-.star-rating::before {
-  content: "★★★★★";
-  letter-spacing: 3px;
-  font-size: 25px;
-  color: #ff7300;
+
+.star-rating:before {
+  content: "SSSSS";
+  top: 0;
+  inset-inline-start: 0;
+  position: absolute;
 }
+
 .star-rating span {
   overflow: hidden;
-  position: absolute;
-  opacity: 1;
   top: 0;
-  left: 0;
-  z-index: 1;
-  display: block;
-  white-space: nowrap;
+  inset-inline-start: 0;
+  position: absolute;
+  padding-top: 1em;
 }
-.star-rating span::before {
-  content: "★★★★★";
-  letter-spacing: 3px;
+
+.star-rating span:before {
+  content: "SSSSS";
+  top: 0;
+  inset-inline-start: 0;
+  position: absolute;
+  color: var(--star-rating-initial-color, #fda256);
 }
 
 .single-product-review-link {
@@ -290,6 +310,121 @@ body {
 }
 
 .description-rating-link-container a.active {
+  opacity: 0.75;
+}
+
+/* Reviews Single Product */
+
+.reviews-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.woocommerce-Reviews-title {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.commentlist {
+  list-style: none;
+  padding: 0;
+}
+
+.comment_container {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+/* Add product rating */
+
+.comment-reply-title {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.comment-form-rating {
+  display: flex;
+}
+
+.comment-form-rating label {
+  font-size: 14px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.comment-form-rating .stars {
+  color: var(--star-rating-initial-color, #fda256);
+  font-size: 0.9em;
+}
+
+.comment-form-rating .stars span {
+  display: flex;
+  padding-top: 2px;
+  font-size: 14px;
+}
+
+.comment-form-rating .stars a {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  text-indent: -999em;
+  text-decoration: none;
+  color: currentColor;
+  margin-inline-start: 8px;
+}
+
+.comment-form-rating .stars a:before {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  font-family: "star";
+  content: "s";
+  line-height: 1;
+  text-indent: 0;
+}
+
+.comment-form-rating .stars a:hover ~ a:before {
+  content: "s";
+}
+
+.comment-form-rating .stars:hover a:before {
+  content: "S";
+}
+
+.comment-form-rating .stars.selected a.active:before {
+  content: "S";
+}
+
+.comment-form-rating .stars.selected a.active ~ a:before {
+  content: "s";
+}
+
+.comment-form-rating .stars.selected a:not(.active):before {
+  content: "S";
+}
+
+.comment-textare {
+  width: 100%;
+}
+
+.form-submit > .submit {
+  border: 0;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-submit > .submit:hover {
   opacity: 0.75;
 }
 
