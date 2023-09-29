@@ -111,11 +111,16 @@ body {
   width: 90%;
 }
 
+.single-product-info-container > h1 {
+  margin-top: 20px;
+}
+
 .single-product-cart {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   width: 100%;
+  margin: 5px 0px 20px 0px;
 }
 
 .description-rating-container {
@@ -170,11 +175,122 @@ body {
   background-color: black;
   color: white;
   padding: 0px 15px;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .single_add_to_cart_button:hover {
-  opacity: 0.8;
+  opacity: 0.75;
+}
+
+/* SKU and Category text */
+
+.sku-category-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.sku_wrapper {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.sku_wrapper > span {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.posted_in {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.posted_in a {
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+}
+
+.posted_in a:hover {
+  text-decoration: underline;
+}
+
+/* Product rating */
+
+.single-product-rating-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.star-rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.star-rating::before {
+  content: "★★★★★";
+  letter-spacing: 3px;
+  font-size: 25px;
+  color: #ff7300;
+}
+.star-rating span {
+  overflow: hidden;
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  white-space: nowrap;
+}
+.star-rating span::before {
+  content: "★★★★★";
+  letter-spacing: 3px;
+}
+
+.single-product-review-link {
+  color: black;
+  font-size: 13px;
+  margin-left: 5px;
+}
+
+/* Description and Rating */
+
+.description-rating-link-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.description-rating-link-container > ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  gap: 10px;
+}
+
+.description-rating-link-container > ul > li {
+  list-style: none;
+}
+
+.description-rating-link-container a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.description-rating-link-container a:hover {
+  text-decoration: underline;
+}
+
+.description-rating-link-container a.active {
+  opacity: 0.75;
 }
 
 /* Footer */
