@@ -85,7 +85,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 35px;
+  margin: 35px 0px;
   padding-bottom: 25px;
   border-bottom: 1px solid #ddd;
   width: 90%;
@@ -120,6 +120,8 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
+  margin-top: 25px;
+  gap: 10px;
 }
 
 .single-product-info-container {

@@ -35,17 +35,20 @@ do_action('woocommerce_before_main_content');
         <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
     <?php endif; ?>
 
-    <?php if (have_rows('image_slider')) : ?>
+    <?php $shop_page_id = wc_get_page_id('shop'); ?>
+
+    <?php if (have_rows('image_slider', $shop_page_id)) : ?>
         <div class="slider">
-            <?php while (have_rows('image_slide')) : the_row();
+            <?php while (have_rows('image_slider', $shop_page_id)) : the_row();
                 $image = get_sub_field('image');
             ?>
                 <div>
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    <img src="<?php the_sub_field('image'); ?>" />
                 </div>
             <?php endwhile; ?>
         </div>
     <?php endif; ?>
+
 
 
 
