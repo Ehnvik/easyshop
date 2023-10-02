@@ -87,3 +87,11 @@ if (function_exists('acf_add_options_page')) {
         'redirect'        => false
     ));
 }
+?>
+
+<?php function my_excerpt_length($length)
+{
+    return  8;
+}
+add_filter('excerpt_length', 'my_excerpt_length');
+?>

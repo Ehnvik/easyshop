@@ -433,3 +433,72 @@ body {
 footer a {
   color: black;
 }
+
+.entry-title a {
+  text-decoration: none;
+  color: black;
+}
+
+.theSingleH3 {
+  color: black;
+}
+
+.theSingleText {
+  color: black;
+}
+
+.theContent {
+  color: black;
+}
+
+.theAllNews {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 150px !important;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.theNews {
+  display: flex;
+  align-items: center;
+  width: 355px;
+  height: 405px;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  padding: 15px;
+  transition: 0.2s ease-in-out;
+}
+
+.theNews:hover {
+  transform: scale(1.2);
+}
+
+.theImg img {
+  width: 250px;
+  height: 250px;
+}
+
+.theSingleInlägg {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.theSingleInlägg .theImgForSingle {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.headingNews {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  padding-bottom: 100px;
+}

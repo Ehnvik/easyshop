@@ -1,6 +1,5 @@
 <?php get_header() ?>
 
-
 <?php
 if (have_posts()) :
     while (have_posts()) : the_post();
@@ -10,5 +9,7 @@ else :
     echo '<p>Inget innehåll hittades.</p>';
 endif;
 ?>
+
+
 
 <?php get_footer() ?>
