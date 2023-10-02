@@ -43,7 +43,7 @@ function post_type_news()
     $labels = array(
         'name' => _x('News', 'plural'),
         'singular_name' => _x('News', 'singular'),
-        'menu_name' => _x('News', 'admin menu'),
+        'menu_name' => _x('Stores', 'admin menu'),
         'name_admin_bar' => _x('News', 'admin bar'),
         'add_new' => _x('Add New', 'add new'),
         'add_new_item' => __('Add New news'),
