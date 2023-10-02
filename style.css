@@ -85,6 +85,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ddd;
+  width: 90%;
 }
 
 @media (min-width: 992px) {
@@ -94,8 +98,8 @@ body {
     justify-content: center;
     align-items: flex-start;
     width: 90%;
-    border-bottom: 1px solid #ddd;
     padding-bottom: 50px;
+    margin-bottom: 0;
   }
 }
 
@@ -150,6 +154,9 @@ body {
   align-items: flex-start;
   justify-content: space-around;
   width: 90%;
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ddd;
 }
 
 @media (min-width: 992px) {
@@ -159,7 +166,6 @@ body {
     align-items: center;
     margin-bottom: 50px;
     padding-bottom: 50px;
-    border-bottom: 1px solid #ddd;
   }
 }
 
