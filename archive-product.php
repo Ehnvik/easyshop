@@ -29,10 +29,18 @@ get_header('shop');
  */
 do_action('woocommerce_before_main_content');
 
+
 ?>
 
-
 <?php $shop_page_id = wc_get_page_id('shop'); ?>
+
+<?php if (get_field('free_shipping_header', $shop_page_id)) : ?>
+    <div class="free-shipping-container">
+        <h4 class="free-shipping-text"><?php the_field('free_shipping_header', $shop_page_id); ?></h4>
+    </div>
+<?php endif; ?>
+
+
 
 <?php if (have_rows('image_slider', $shop_page_id)) : ?>
     <div class="image-slider-container">
