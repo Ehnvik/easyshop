@@ -1,7 +1,6 @@
 <?php get_header() ?>
 <h1><?php wp_title('', true, 'right'); ?></h1>
 
-<h1 class="headingNews">All news</h1>
 <div class="theAllNews">
     <?php
     if (have_posts()) :
