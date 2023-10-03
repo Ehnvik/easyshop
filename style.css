@@ -48,7 +48,7 @@ body {
 
 .slider {
   width: 100%;
-  overflow: hidden; /* För att förhindra oönskade scrollbars om bilder är större än skärmstorleken */
+  overflow: hidden;
 }
 
 @media (min-width: 650px) {
@@ -98,11 +98,32 @@ body {
   padding: 15px;
   background-color: #6c757d;
   color: white;
-  margin-bottom: 25px;
+}
+
+@media (min-width: 650px) {
+  .free-shipping-container {
+    margin-bottom: 25px;
+  }
 }
 
 .free-shipping-text {
   margin-bottom: 0;
+}
+
+.result-count-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.result-count-container {
+  padding-top: 25px;
+  border-top: 1px solid #ddd;
+  width: 90%;
+}
+
+.woocommerce-result-count {
+  font-weight: 600;
 }
 
 .products {
@@ -111,6 +132,7 @@ body {
   justify-content: space-around;
   text-align: center;
   padding: 0;
+  margin-top: 25px;
 }
 
 .products li {
