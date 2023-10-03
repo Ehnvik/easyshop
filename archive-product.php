@@ -30,40 +30,39 @@ get_header('shop');
 do_action('woocommerce_before_main_content');
 
 ?>
-<header class="woocommerce-products-header">
-    <?php if (apply_filters('woocommerce_show_page_title', true)) : ?>
-        <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
-    <?php endif; ?>
 
-    <?php $shop_page_id = wc_get_page_id('shop'); ?>
 
-    <?php if (have_rows('image_slider', $shop_page_id)) : ?>
+<?php $shop_page_id = wc_get_page_id('shop'); ?>
+
+<?php if (have_rows('image_slider', $shop_page_id)) : ?>
+    <div class="image-slider-container">
         <div class="slider">
-            <?php while (have_rows('image_slider', $shop_page_id)) : the_row();
-                $image = get_sub_field('image');
-            ?>
+            <?php while (have_rows('image_slider', $shop_page_id)) : the_row(); ?>
+                <?php $image = get_sub_field('image'); ?>
+                <?php $picture = $image['sizes']['large']; ?>
                 <div>
-                    <img src="<?php the_sub_field('image'); ?>" />
+                    <img src="<?php echo $picture ?>" alt="<?php $image['alt']; ?>">
                 </div>
             <?php endwhile; ?>
         </div>
-    <?php endif; ?>
+    </div>
+<?php endif; ?>
 
 
 
 
 
 
-    <?php
+<?php
 
-    /**
-     * Hook: woocommerce_archive_description.
-     *
-     * @hooked woocommerce_taxonomy_archive_description - 10
-     * @hooked woocommerce_product_archive_description - 10
-     */
-    do_action('woocommerce_archive_description');
-    ?>
+/**
+ * Hook: woocommerce_archive_description.
+ *
+ * @hooked woocommerce_taxonomy_archive_description - 10
+ * @hooked woocommerce_product_archive_description - 10
+ */
+do_action('woocommerce_archive_description');
+?>
 </header>
 <?php
 if (woocommerce_product_loop()) {
