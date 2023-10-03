@@ -38,6 +38,28 @@ body {
   }
 }
 
+/* Breadcrumb */
+
+.woocommerce-breadcrumb {
+  margin: 5px 0px 0px 13px;
+}
+
+.woocommerce-breadcrumb a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+.woocommerce-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Products Title */
+
+.woocommerce-products-header__title {
+  text-align: center;
+  margin: 50px 0px;
+}
+
 /* Image Slider */
 
 .image-slider-container {
@@ -627,6 +649,133 @@ body {
 }
 
 .form-submit > .submit:hover {
+  opacity: 0.75;
+}
+
+/* Cart */
+
+.empty-cart-checkout {
+  margin-bottom: 40vh;
+}
+
+.woocommerce-info {
+  color: black;
+  border-top-color: black;
+}
+
+.woocommerce-info::before {
+  color: black;
+}
+
+.return-to-shop-button {
+  background-color: black !important;
+  color: white !important;
+  transition: all 0.2s ease-in-out;
+  margin-left: 10px !important;
+}
+
+.return-to-shop-button:hover {
+  opacity: 0.75;
+}
+
+.woocommerce-message {
+  color: black;
+  border-top-color: black;
+}
+
+.woocommerce-message::before {
+  color: black;
+}
+
+.restore-item,
+.wc-forward {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.restore-item:hover,
+.wc-forward:hover {
+  text-decoration: underline;
+}
+
+.woocommerce-cart-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.cart-products-container {
+  width: 90%;
+}
+
+.woocommerce a.remove {
+  color: black !important;
+}
+
+.woocommerce a.remove:hover {
+  background-color: black !important;
+}
+
+.product-thumbnail img {
+  width: 150px;
+}
+
+.product-name a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.product-name a:hover {
+  text-decoration: underline;
+}
+
+.coupon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.coupon button {
+  background-color: black !important;
+  color: white !important;
+  transition: all 0.2s ease-in-out;
+  margin-left: 10px !important;
+}
+
+.coupon button:hover {
+  opacity: 0.75;
+}
+
+.cart-collaterals-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cart-collaterals {
+  width: 90% !important;
+}
+
+@media (min-width: 1400px) {
+  .cart-products-container {
+    width: 70%;
+  }
+
+  .cart-collaterals {
+    width: 70% !important;
+  }
+}
+
+.checkout-button {
+  background-color: black !important;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.checkout-button:hover {
   opacity: 0.75;
 }
 
