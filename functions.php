@@ -28,6 +28,35 @@ function mytheme_add_woocommerce_support()
 }
 add_action('after_setup_theme', 'mytheme_add_woocommerce_support');
 
+function custom_woocommerce_single_variation_add_to_cart_button()
+{
+    global $product;
+?>
+    <div class="single-product-cart">
+        <div class="quantity-selector">
+            <button class="minus-button" type="button" onclick="adjustQuantity('minus')">
+                <i class="fa fa-minus"></i>
+            </button>
+            <input class="quantity-number-input" type="number" id="quantity" name="quantity" value="1" min="1" placeholder="Quantity" readonly>
+            <button class="plus-button" type="button" onclick="adjustQuantity('plus')">
+                <i class="fa fa-plus"></i>
+            </button>
+        </div>
+        <button type="submit" class="single_add_to_cart_button button alt"><?php echo esc_html($product->single_add_to_cart_text()); ?></button>
+        <input type="hidden" name="add-to-cart" value="<?php echo absint($product->get_id()); ?>" />
+        <input type="hidden" name="product_id" value="<?php echo absint($product->get_id()); ?>" />
+        <input type="hidden" name="variation_id" class="variation_id" value="0" />
+    </div>
+<?php
+}
+
+remove_action('woocommerce_single_variation', 'woocommerce_single_variation_add_to_cart_button', 20);
+add_action('woocommerce_single_variation', 'custom_woocommerce_single_variation_add_to_cart_button', 20);
+
+
+
+
+
 function easyshop_menus()
 {
     $location = array(
