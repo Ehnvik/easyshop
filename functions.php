@@ -54,6 +54,29 @@ remove_action('woocommerce_single_variation', 'woocommerce_single_variation_add_
 add_action('woocommerce_single_variation', 'custom_woocommerce_single_variation_add_to_cart_button', 20);
 
 
+?>
+
+<?php
+
+function update_cart_product_quantity()
+{
+?>
+
+    <div class="single-product-cart">
+        <div class="quantity-selector">
+            <button class="minus-button" type="button" onclick="adjustQuantity('minus')">
+                <i class="fa fa-minus"></i>
+            </button>
+            <input class="quantity-number-input" type="number" id="quantity" name="quantity" value="1" min="1" placeholder="Quantity" readonly>
+            <button class="plus-button" type="button" onclick="adjustQuantity('plus')">
+                <i class="fa fa-plus"></i>
+            </button>
+        </div>
+    </div>
+<?php
+}
+
+
 
 
 
