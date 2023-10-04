@@ -1,6 +1,5 @@
 <?php get_header() ?>
 <h1><?php wp_title('', true, 'right'); ?></h1>
-
 <div class="theAllNews">
     <?php
     if (have_posts()) :
@@ -12,5 +11,7 @@
     endif;
     ?>
 </div>
+
+
 
 <?php get_footer() ?>
