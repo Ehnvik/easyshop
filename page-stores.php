@@ -14,10 +14,12 @@ get_header();
 $loop = new WP_Query($args);
 while ($loop->have_posts()) : $loop->the_post();
 
-    echo '<div class="entry-content">';
-    the_content();
 ?>
+    <?php
+    the_content();
+    ?>
     <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+
 <?php
     echo '</div>';
 endwhile;
