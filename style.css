@@ -809,12 +809,6 @@ body {
   width: 90%;
 }
 
-/* @media (min-width: 768px) {
-  .wpcf7-form {
-    width: 40%;
-  }
-} */
-
 .contact-form-wrapper {
   width: 100%;
   display: flex;
