@@ -189,6 +189,15 @@ body {
   align-items: center;
   color: black;
   text-decoration: none;
+  margin-top: 8px;
+}
+
+.products a.product_type_external {
+  font-weight: 600;
+}
+
+.products a.product_type_external:hover {
+  text-decoration: underline;
 }
 
 .add_to_cart_button {
@@ -363,6 +372,12 @@ body {
 
 .single_add_to_cart_button:hover {
   opacity: 0.75;
+}
+
+.external-product-buy-button {
+  padding: 5px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 .change-size-container {
@@ -751,6 +766,16 @@ body {
 
 .coupon button:hover {
   opacity: 0.75;
+}
+
+.woocommerce-remove-coupon {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.woocommerce-remove-coupon:hover {
+  text-decoration: underline;
 }
 
 .woocommerce button.button {
