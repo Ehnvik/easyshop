@@ -57,15 +57,15 @@ function post_type_news()
 
     $labels = array(
         'name' => _x('Stores', 'plural'),
-        'singular_name' => _x('Stors', 'singular'),
+        'singular_name' => _x('Stores', 'singular'),
         'menu_name' => _x('Stores', 'admin menu'),
-        'name_admin_bar' => _x('Shops', 'admin bar'),
+        'name_admin_bar' => _x('Stores', 'admin bar'),
         'add_new' => _x('Add New', 'add new'),
-        'add_new_item' => __('Add New shop news'),
-        'new_item' => __('Shop news'),
-        'edit_item' => __('Edit shop news'),
-        'view_item' => __('View shop news'),
-        'all_items' => __('All shop news'),
+        'add_new_item' => __('Add New stores news'),
+        'new_item' => __('Stores news'),
+        'edit_item' => __('Edit stores news'),
+        'view_item' => __('View stores news'),
+        'all_items' => __('All stores news'),
         'search_items' => __('Search news'),
         'not_found' => __('No news found.'),
     );
@@ -75,12 +75,12 @@ function post_type_news()
         'labels' => $labels, // Namn och text som syns i UI:t
         'public' => true, // Om alla användare ska kunna skapa denna post-types
         'query_var' => true, // Skapa en query-variabel för post-typen
-        'rewrite' => array('slug' => 'shops'), // Hur man når post-typen (t.ex. som inläggsida) http://localhost/news/
+        'rewrite' => array('slug' => 'stores'), // Hur man når post-typen (t.ex. som inläggsida) http://localhost/news/
         'has_archive' => true, // Ska post-typen ha arkiv-sida? Likt inlägg
         'hierarchical' => false, // Ska de behandlas som sidor (true) eller inlägg (false)?
     );
 
-    register_post_type('news', $args);
+    register_post_type('stores', $args);
 }
 
 add_action('init', 'post_type_news');
