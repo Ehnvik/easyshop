@@ -21,10 +21,8 @@ add_filter('excerpt_length', 'my_excerpt_length');
 ?>
 
 
-<!--  -->
 
 <?php
-
 
 function post_type_news()
 {
@@ -84,6 +82,5 @@ function post_type_news()
 }
 
 add_action('init', 'post_type_news');
-
 
 ?>
