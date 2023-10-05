@@ -880,6 +880,10 @@ footer a {
   color: black;
 }
 
+.entry-title {
+  font-size: 1rem;
+}
+
 .theSingleH3 {
   color: black;
 }
