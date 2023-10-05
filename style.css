@@ -969,13 +969,116 @@ body {
   opacity: 0.75;
 }
 
+/* My Account Page */
+
+.my-account-container {
+  display: flex;
+  justify-content: center;
+}
+
+.my-account-container a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.my-account-container a:hover {
+  text-decoration: underline;
+}
+
+.my-account-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-top: 25px;
+}
+
+.woocommerce-MyAccount-navigation {
+  width: 80%;
+}
+
+@media (min-width: 992px) {
+  .my-account-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 70%;
+    gap: 35px;
+  }
+
+  .woocommerce-MyAccount-navigation {
+    width: 40%;
+  }
+}
+
+.woocommerce-MyAccount-navigation ul {
+  list-style: none;
+  padding: 0;
+}
+
+.woocommerce-MyAccount-navigation ul {
+  font-size: 15px;
+}
+
+.woocommerce-MyAccount-navigation ul li:not(:last-child) a {
+  border-bottom: 1px solid black;
+}
+
+.woocommerce-MyAccount-navigation ul li:hover a,
+.woocommerce-MyAccount-navigation ul li.is-active a {
+  color: white;
+  background: black;
+}
+
+.woocommerce-MyAccount-navigation ul li a {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  padding: 0 20px;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+}
+
+.woocommerce-MyAccount-navigation ul li a:before {
+  font-size: 16px;
+  font-weight: normal;
+  width: 20px;
+  margin-inline-end: 15px;
+}
+
+.woocommerce-MyAccount-content {
+  width: 90%;
+}
+
+@media (min-width: 992px) {
+  .woocommerce-MyAccount-content {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .woocommerce-MyAccount-content {
+    width: 50%;
+  }
+}
+
+.show-password-input::after {
+  display: none;
+}
+
+.woocommerce-EditAccountForm label {
+  font-weight: 600;
+}
+
 /* Footer */
 
 footer a {
   color: black;
 }
 
-.entry-title a {
+/* .entry-title a {
   text-decoration: none;
   color: black;
 }
@@ -1042,4 +1145,4 @@ footer a {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
   padding-bottom: 100px;
-}
+} */
