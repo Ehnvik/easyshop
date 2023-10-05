@@ -155,29 +155,14 @@ add_filter('excerpt_length', 'my_excerpt_length');
 function post_type_news()
 {
     $supports = array(
-        'title', /*Ger själva inläget en rubrik*/
-
-        'editor', /*Det är som en p tag där du skriver ut
-        texter som du vill ska synnas för inlägget*/
-
-        'author',/*Att man namger vem som har skrivit inlägget*/
-
-        'thumbnail', /*Gör att man kan lägga till bild*/
-
-        'excerpt',/*Ett utdrag i WordPress är en term som används för artikelsammanfattning
-        med en länk till hela posten. Ett utdrag kan genereras automatiskt av 
-        ett WordPress-tema eller genom att använda taggen 
-        <!--more - > i inläggsinnehållet.*/
-
-        'custom-fields',/* 
-        I WordPress används anpassade fält för att lägga till ytterligare
-        information relaterad till ett inlägg eller en sida.
-        */
-
-        'comments', /*Att man kan tillåta kommentarer */
-
-        'revisions', /*Revisionssystemet lagrar ett register över varje sparat utkast eller publicerad uppdatering. */
-
+        'title',
+        'editor',
+        'author',
+        'thumbnail',
+        'excerpt',
+        'custom-fields',
+        'comments',
+        'revisions',
         'post-formats',
     );
 
