@@ -1,25 +1,5 @@
 <?php
 
-
-// $product_categories = get_terms('product_cat');
-
-
-
-// // Loop through and display category names as links
-// foreach ($product_categories as $category) {
-//     $category_link = get_term_link($category);
-
-//     if (!is_wp_error($category_link)) {
-//         echo '<a href="' . esc_url($category_link) . '">' . esc_html($category->name) . '</a><br>';
-//     }
-// }
-
-?>
-
-
-
-<?php
-
 /**
  * The Template for displaying product archives, including the main shop page which is a post type archive
  *

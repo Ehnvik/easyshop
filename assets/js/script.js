@@ -26,3 +26,21 @@
         });
       });
       
+     // Toggle header searchbar
+     function toggleSearch() {
+      const searchBox = document.querySelector('.search-box');
+      const searchIcon = document.querySelector('.search-icon');
+      const closeIcon = document.querySelector('.close-icon');
+  
+      if (searchBox.style.display === 'none' || searchBox.style.display === '') {
+          searchBox.style.display = 'flex';
+          searchIcon.style.display = 'none';
+          closeIcon.style.display = 'block';
+      } else {
+          searchBox.style.display = 'none';
+          searchIcon.style.display = 'block';
+          closeIcon.style.display = 'none';
+      }
+  }
+  
+  

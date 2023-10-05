@@ -38,6 +38,48 @@ body {
   }
 }
 
+/* Searchbar */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-left: 15px;
+}
+
+.header-search-icon {
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.2s ease-in-out;
+}
+
+.header-search-icon:hover {
+  transform: scale(1.4);
+}
+
+.search-box {
+  display: none;
+  margin-left: 15px;
+}
+
+.search-box input {
+  padding: 5px 10px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+#searchsubmit {
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+#searchsubmit:hover {
+  opacity: 0.75;
+}
+
 /* Breadcrumb */
 
 .woocommerce-breadcrumb {

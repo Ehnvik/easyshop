@@ -31,10 +31,19 @@
                         'theme_location' => 'primary',
                         'container' => false, // Do not wrap the menu in any container
                         'items_wrap' => '<ul id="%1$s" class="%2$s navbar-nav ms-auto mb-2 mb-lg-0">%3$s</ul>',
-
                     ));
+
                     ?>
+                    <div class="search-container">
+                        <i class="fa fa-search search-icon header-search-icon" onclick="toggleSearch()"></i>
+                        <i class="fa fa-times close-icon header-search-icon" style="display: none;" onclick="toggleSearch()"></i>
+                        <div class="search-box">
+                            <?php get_search_form() ?>
+                        </div>
+                    </div>
+
                 </div>
+            </div>
             </div>
         </nav>
     </header>
