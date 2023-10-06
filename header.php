@@ -14,22 +14,22 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <!-- Brand/logo -->
+
                 <a class="navbar-brand" href="<?php echo home_url(); ?>">
                     <?php bloginfo('name'); ?>
                 </a>
 
-                <!-- Burger icon for mobile view -->
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- Menu -->
+
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'primary',
-                        'container' => false, // Do not wrap the menu in any container
+                        'container' => false,
                         'items_wrap' => '<ul id="%1$s" class="%2$s navbar-nav ms-auto mb-2 mb-lg-0">%3$s</ul>',
                     ));
 
