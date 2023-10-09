@@ -63,6 +63,7 @@ do_action('woocommerce_before_main_content');
 
 
 <?php if (have_rows('image_slider', $shop_page_id)) : ?>
+
     <div class="image-slider-container">
         <div class="slider">
             <?php while (have_rows('image_slider', $shop_page_id)) : the_row(); ?>
