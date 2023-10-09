@@ -52,7 +52,7 @@ do_action('woocommerce_before_main_content');
 
 ?>
 
-<?php $shop_page_id = wc_get_page_id('shop'); ?>
+<?php $shop_page_id = wc_get_page_id('shop');  ?>
 <?php echo $shop_page_id ?>
 <?php have_rows('image_slider', $shop_page_id) ?>
 
