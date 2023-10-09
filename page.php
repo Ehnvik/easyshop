@@ -1,15 +1,17 @@
-<?php get_header() ?>
-
-<?php
-if (have_posts()) :
+<?php get_header(); ?>
+    <?php
     while (have_posts()) : the_post();
-        get_template_part('template-parts/content', 'contact');
+
+        if (is_page('Contact Us')) {
+            get_template_part('template-parts/content', 'contact');
+        } elseif (is_page('Stores')) {
+            echo '<h1 class="news-title">' . get_the_title() . '</h1>';
+            get_template_part('template-parts/content', 'stores');
+            break;
+        } else {
+            echo '<h1 class="news-title">' . get_the_title() . '</h1>';
+            the_content();
+        }
     endwhile;
-else :
-    echo '<p>Inget innehåll hittades.</p>';
-endif;
-?>
-
-
-
-<?php get_footer() ?>
+    ?>
+<?php get_footer(); ?>

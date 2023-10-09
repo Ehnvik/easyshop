@@ -1072,6 +1072,42 @@ body {
   font-weight: 600;
 }
 
+.woocommerce-address-fields input {
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.woocommerce-EditAccountForm input {
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.woocommerce-orders-table__cell-order-actions a {
+  background-color: black !important;
+  color: white !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.woocommerce-orders-table__cell-order-actions a:hover {
+  opacity: 0.75;
+}
+
+.woocommerce-info .wc-forward {
+  background-color: black !important;
+  color: white !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.woocommerce-info .wc-forward:hover {
+  opacity: 0.75;
+}
+
+.mark,
+mark {
+  background-color: black;
+  color: white;
+}
+
 /* My Account Login */
 
 .my-account-login-wrapper {
@@ -1084,6 +1120,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   width: 90%;
+  margin-top: 35px;
 }
 
 .woocommerce-form-login {
@@ -1181,6 +1218,7 @@ body {
 .checkout-container {
   display: flex;
   justify-content: center;
+  margin-top: 35px;
 }
 
 .checkout-container > .woocommerce-message {
@@ -1330,6 +1368,7 @@ body {
 
 .news-title {
   padding: 15px 0px 0px 15px;
+  font-size: 28px;
 }
 
 .theAllNews {
@@ -1376,11 +1415,8 @@ body {
 .theContent {
   max-width: 258px;
 }
-/* Footer */
 
-footer a {
-  color: black;
-}
+/* Single News */
 
 .single-news-title {
   padding: 15px 0px 0px 15px;
@@ -1422,4 +1458,10 @@ footer a {
   .single-news-content-container {
     width: 50%;
   }
+}
+
+/* Footer */
+
+footer a {
+  color: black;
 }
