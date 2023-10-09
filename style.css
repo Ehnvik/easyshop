@@ -933,6 +933,10 @@ footer a {
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: 500px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .theSingleInlägg .theImgForSingle {
@@ -961,4 +965,14 @@ footer a {
   width: 300px;
   height: 360px;
   border: 2px solid black;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.theLink {
+  color: black;
+}
+
+.theLink:hover {
+  color: lightblue;
 }

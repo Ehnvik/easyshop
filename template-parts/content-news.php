@@ -13,7 +13,9 @@
             </a>
         </h2>
         <div class="theContent">
-            <?php the_excerpt(); ?>
+            <a class="theLink" href="<?php the_permalink() ?>">
+                <?php the_excerpt(); ?>
+            </a>
         </div>
     </article>
 </div>
