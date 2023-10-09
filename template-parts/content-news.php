@@ -4,7 +4,6 @@
         <a href="<?php the_permalink() ?>">
             <div class="theImg">
                 <!-- <img src="<?php /* the_field('imgnews') */ ?>" alt=""> -->
-
             </div>
         </a>
         <h2 class="entry-title">
