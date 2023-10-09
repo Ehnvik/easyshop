@@ -76,6 +76,23 @@ function update_cart_product_quantity()
 <?php
 }
 
+function easyshop_search_filter_pages($query)
+{
+
+    if ($query->is_search) {
+
+        $query->set('post_type', 'product');
+
+        $query->set('wc_query', 'product_query');
+    }
+
+    return $query;
+}
+
+
+
+add_filter('pre_get_posts', 'easyshop_search_filter_pages');
+
 
 
 
@@ -123,6 +140,15 @@ function easyshop_widgets()
         'after_widget' => '</div>',
         'before_title' => '<h4>',
         'after_title' => '</h4>',
+    ));
+
+    register_sidebar(array(
+        'name' => 'Header Search',
+        'id' => 'header_search',
+        'before_widget' => '<div class="header-search-container">',
+        'after_widget' => '</div>',
+        'before_title' => '',
+        'after_title' => ''
     ));
 }
 add_action('widgets_init', 'easyshop_widgets');

@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>">
-</head>
-
-<body>
     <?php
     get_header();
     ?>
@@ -18,18 +7,26 @@
         if (have_posts()) :
             while (have_posts()) : the_post();
         ?>
-                <h3>
+                <h1 class="single-news-title">
                     <?php
                     the_title();
                     ?>
-                </h3>
-                <div class="theImgForSingle">
-                    <img src="<?php the_field('imgnews') ?>" alt="">
-                </div>
-                <div class="theSingleText">
-                    <?php
-                    the_content();
-                    ?>
+                </h1>
+                <div class="single-news-wrapper">
+                    <div class="single-news-container">
+                        <div class="single-news-image-container">
+
+                            <?php $image =  get_field('imgnews') ?>
+                            <?php $picture = $image['sizes']['large'] ?>
+
+                            <img src="<?php echo $picture ?>" alt="<?php $image['alt']; ?>">
+                        </div>
+                        <div class="single-news-content-container">
+                            <?php
+                            the_content();
+                            ?>
+                        </div>
+                    </div>
                 </div>
         <?php
             endwhile;
