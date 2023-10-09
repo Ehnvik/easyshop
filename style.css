@@ -1125,6 +1125,10 @@ body {
   font-weight: 600;
 }
 
+.entry-title {
+  font-size: 1.5rem;
+}
+
 .woocommerce-form-login a:hover {
   text-decoration: underline;
 }
@@ -1350,7 +1354,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #ddd;
+  width: 300px;
+  height: 405px;
+  border: 2px solid black;
   border-radius: 5px;
   text-align: center;
   background-color: white;
@@ -1358,8 +1364,8 @@ body {
   transition: 0.2s ease-in-out;
 }
 
-.news-container:hover {
-  transform: scale(1.05);
+.theNews:hover {
+  transform: scale(1.2);
 }
 
 .news-container a {
@@ -1390,8 +1396,8 @@ footer a {
 
 .single-news-wrapper {
   display: flex;
-  justify-content: center;
-  margin-top: 25px;
+  flex-direction: column;
+  text-align: center;
 }
 
 .single-news-container {
@@ -1399,6 +1405,11 @@ footer a {
   flex-direction: column;
   align-items: center;
   width: 90%;
+}
+
+.theImgForSingle img {
+  width: 250px;
+  height: 285px;
 }
 
 .single-news-image-container {
@@ -1422,4 +1433,24 @@ footer a {
   .single-news-content-container {
     width: 50%;
   }
+}
+
+.store {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  width: 300px;
+  height: 360px;
+  border: 2px solid black;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.theLink {
+  color: black;
+}
+
+.theLink:hover {
+  color: lightblue;
 }

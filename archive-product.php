@@ -32,7 +32,9 @@ do_action('woocommerce_before_main_content');
 
 ?>
 
-<?php $shop_page_id = wc_get_page_id('shop'); ?>
+<?php $shop_page_id = wc_get_page_id('shop');  ?>
+<?php echo $shop_page_id ?>
+<?php have_rows('image_slider', $shop_page_id) ?>
 
 <?php if (get_field('free_shipping_header', $shop_page_id)) : ?>
     <div class="free-shipping-container">
@@ -43,6 +45,7 @@ do_action('woocommerce_before_main_content');
 
 
 <?php if (have_rows('image_slider', $shop_page_id)) : ?>
+
     <div class="image-slider-container">
         <div class="slider">
             <?php while (have_rows('image_slider', $shop_page_id)) : the_row(); ?>
