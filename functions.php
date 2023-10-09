@@ -177,38 +177,34 @@ add_filter('excerpt_length', 'my_excerpt_length');
 <?php function post_type_stores()
 {
     $supports = array(
-        'title',
-        'editor',
-        'author',
-        'thumbnail',
-        'excerpt',
-        'custom-fields',
+        'title', // Gör det möjligt att fylla i en titel till inläggen
+        'editor', // Det här är content delen till inläggen
+        'custom-fields', // Gör det möjligt att koppla ACF till inläggen (fungerar även utan)
     );
 
     $labels = array(
-        'name' => _x('Stores', 'plural'),
-        'singular_name' => _x('Stores', 'singular'),
-        'menu_name' => _x('Stores', 'admin menu'),
-        'name_admin_bar' => _x('Stores', 'admin bar'),
-        'add_new' => _x('Add New', 'add new'),
-        'add_new_item' => __('Add New store'),
-        'new_item' => __('New store'),
-        'edit_item' => __('Edit store'),
-        'view_item' => __('View store'),
-        'all_items' => __('All stores'),
+        'name' => _x('Stores', 'plural'), // Plural form av post-type som visas i admin-sidopanelen
+        'singular_name' => _x('Stores', 'singular'), // Singular form av post-type när man redigerar ett enskilt inlägg
+        'menu_name' => _x('Stores', 'admin menu'), // Namnet på post-typen som visas i wordPress admin-menyn
+        'name_admin_bar' => _x('Stores', 'admin bar'), // Namnet som visas på admin toolbar
+        'add_new' => _x('Add New', 'add new'), // Texten för "Lägg till ny" knappen när man vill skapa ett inlägg i sidopanelen
+        'add_new_item' => __('Add New Store'), // Texten till rubriken när man skapar ett nytt inlägg
+        'edit_item' => __('Edit Store'), // Texten för att redigera ett inlägg
+        'all_items' => __('All Stores'), // Texten för att visa alla inlägg i sidopanelen
     );
+
 
     $args = array(
         'supports' => $supports, // Vilka "content" delar som ska användas i post-typen
         'labels' => $labels, // Namn och text som syns i UI:t
         'public' => true, // Om alla användare ska kunna skapa denna post-types
         'query_var' => true, // Skapa en query-variabel för post-typen
-        'rewrite' => array('slug' => 'stores'), // Hur man når post-typen (t.ex. som inläggsida) http://localhost/news/
-        'has_archive' => true, // Ska post-typen ha arkiv-sida? Likt inlägg
+        'rewrite' => array('slug' => 'stores'), // Hur man når post-typen (t.ex. som inläggsida) http://localhost/stores/
+        'has_archive' => false, // Ska post-typen ha arkiv-sida? Likt inlägg
         'hierarchical' => false, // Ska de behandlas som sidor (true) eller inlägg (false)?
     );
 
-    register_post_type('stores', $args);
+    register_post_type('stores', $args); // Registrerar stores
 }
 
-add_action('init', 'post_type_stores'); ?>
+add_action('init', 'post_type_stores'); ?> <!-- Aktiverar post_type_stores -->
