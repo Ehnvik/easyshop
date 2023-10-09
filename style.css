@@ -941,6 +941,11 @@ footer a {
   margin: auto;
 }
 
+.theImgForSingle img {
+  width: 250px;
+  height: 285px;
+}
+
 .headingNews {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
