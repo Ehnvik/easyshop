@@ -3,7 +3,6 @@
         <?php echo the_post_thumbnail() ?>
         </a>
         <h2 class="the-Title">
-
             <?php the_title();  ?>
             </a>
         </h2>

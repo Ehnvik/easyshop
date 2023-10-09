@@ -152,7 +152,7 @@ add_filter('excerpt_length', 'my_excerpt_length');
 
 <?php
 
-function post_type_news()
+function post_type_stores()
 {
     $supports = array(
         'title',
@@ -194,6 +194,6 @@ function post_type_news()
     register_post_type('stores', $args);
 }
 
-add_action('init', 'post_type_news');
+add_action('init', 'post_type_stores');
 
 ?>
