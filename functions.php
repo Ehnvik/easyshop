@@ -207,4 +207,5 @@ add_filter('excerpt_length', 'my_excerpt_length');
     register_post_type('stores', $args); // Registrerar stores
 }
 
-add_action('init', 'post_type_stores'); ?> <!-- Aktiverar post_type_stores -->
+add_action('init', 'post_type_stores'); // Aktiverar post_type_stores 
+?>
